@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello World!</title>
+</head>
+
+<body>
+    <!-- Toggle Button -->
+    <label class="lights-toggle">
+        <input type="checkbox" onclick="theme(); changeText()">
+        <span class="slider round"></span>
+
+    </label>
+
+    <div id="textchange" class="text">&nbsp;Light Mode is ON</div>
+
+    <script>
+        function theme() {
+            const element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+        function changeText() {
+            const x = document.getElementById("textchange");
+            if (x.innerHTML === "&nbsp;Light Mode is ON") {
+                x.innerHTML = "&nbsp;Dark Mode is ON";
+            } else {
+                x.innerHTML = "&nbsp;Light Mode is ON";
+            }
+        }
+    </script>
+</body>
+
+</html>
